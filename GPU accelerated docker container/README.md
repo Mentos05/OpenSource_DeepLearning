@@ -19,6 +19,7 @@ You have two options:
 * System with NVIDIA GPU (tested with RTX 2070)
 * Linux OS (tested with Ubuntu 18.04)
 * NVIDIA Driver (recommend latest one)
+* NVIDIA CUDA 10.2 or higher
 * NVIDIA Docker (https://github.com/NVIDIA/nvidia-docker)
 
 ## Container Setup
@@ -35,7 +36,7 @@ Copy the following files/folder into a folder:
 Go into this folder and run: 
 `docker build .  -t deeplearning:gpu`
 
-This will create a docker container using nvidia/cuda:10.1-cudnn7-devel-centos7 as base image.<br>
+This will create a docker container using nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04 as base image.<br>
 
 You can then run this container by simply executing: `docker run -it --net=host --gpus all deeplearning:gpu`
 
