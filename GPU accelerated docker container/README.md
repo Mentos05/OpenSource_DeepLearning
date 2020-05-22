@@ -1,16 +1,16 @@
 # GPU-accelerated Docker container for Deep Learning
 <p>An efficient way to develop deep learning applications.</p>
 <p>Highly focussed on running Computer Vision applications like this one:.<p>
-![cv](misc/cv.png "cv")
+<img src="misc/cv.png" alt="Computer Vision Example" align='left' style="width: 40%; height: 100%"/> <br clear='left'>
 
 ## Overview
 This repository provides ressources to spin up a GPU-accelerated docker
 container including:
 * Jupyter Lab
 * Python 3.7 environment
-* various Open Source libraries (details in .yml-file)
+* various Open Source libraries (details in [.yml-File](https://github.com/Mentos05/OpenSource_DeepLearning/blob/master/GPU%20accelerated%20docker%20container/jupyterlab_environments/python_37.yml))
 * OpenCV, OpenPose and YOLOv4
-.
+
 You have two options:
 1. Pull the container from my docker-repository from hub.docker.com (easy but not customizable)
 2. Build your own container (harder but customizable)
@@ -23,7 +23,7 @@ You have two options:
 
 ## Container Setup
 ### Option 1 - Pull the container from my repository
-0. Login to hub.docker.com: `sudo docker login --username your-user-name --password your-password`
+0. Login to hub.docker.com: `docker login --username your-user-name --password your-password`
 1. Pull the image: `docker pull michaelgorkow/main_repository:opensource_deeplearning`
 2. Run the image: `docker run -it --net=host --gpus all michaelgorkow/main_repository:opensource_deeplearning`
 
@@ -65,7 +65,7 @@ Some of the Python packages installed are:<br>
 | OpenPose | [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) |
 | Darknet | [Darknet](https://github.com/AlexeyAB/darknet) |
 
-For a full list, please look at the python_37.yml file [here]().
+For a full list, please look at the [python_37.yml](https://github.com/Mentos05/OpenSource_DeepLearning/blob/master/GPU%20accelerated%20docker%20container/jupyterlab_environments/python_37.yml)-file.
 When building your own container, you can add your own environment.yml files into /jupyterlab_environments folder to have customized Python environments.
 
 ## Tips & Tricks
